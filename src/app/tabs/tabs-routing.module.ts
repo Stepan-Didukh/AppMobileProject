@@ -37,6 +37,9 @@ const routes: Routes = [
           }
         ]
       },
+      { path: 'posts', loadChildren: () =>
+            import('../posts/posts.module').then(m => m.PostsPageModule)
+      },
       {
         path: '',
         redirectTo: '/tabs/tab1',
